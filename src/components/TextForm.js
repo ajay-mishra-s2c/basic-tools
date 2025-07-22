@@ -33,7 +33,8 @@ export default function TextForm(props) {
                 <div className="mb-3">
                     <label className="form-label">Input</label>
                     <textarea className="form-control" rows="5" value={text} onChange={handleOnChange} placeholder='Enter text here'></textarea>
-                    <p><b>Your text summary</b><br />{text.split(" ").filter((e) => {return e.length!==0}).length} words and {text.length} characters</p>    
+                    {/* <p><b>Your text summary</b><br />{text.split(" ").filter((e) => {return e.length!==0}).length} words and {text.length} characters</p>     */}
+                    <p><b>Your text summary</b><br />{text.split(/\s+/).filter((e) => {return e.length!==0}).length} words and {text.length} characters</p>    
                 </div>
 
                 <div className="my-4">
